@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <Preference
-            android:key="clear_catch"
-            android:title="清除缓存"/>
+
+    <PreferenceCategory
+            android:title="Setting"
+            android:key="pref_key_login_settings">
+        <Preference
+                android:key="clear_catch"
+                android:summary="66666"
+                android:title="清除缓存"/>
+    </PreferenceCategory>
     <SwitchPreference
             android:key="push"
             android:title="推送通知"/>
