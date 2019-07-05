@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.find
 
 class MainActivity : BaseActivity(), ToolBarManager {
+    private var mExitTime = 0L
     /**
      * 惰性加载
      */
@@ -34,6 +35,16 @@ class MainActivity : BaseActivity(), ToolBarManager {
                     it1, it.toString())
             }
             transcation.commit()
+        }
+    }
+
+    override fun onBackPressed() {
+        if ((System.currentTimeMillis() - mExitTime) > 2000) {
+            myToast("连按两下退出应用")
+            //showToast("连按两下退出应用",Toast.LENGTH_SHORT) //此种方法调用也可以 有点可变参数的意思在里面
+            mExitTime = System.currentTimeMillis()
+        } else {
+            super.onBackPressed()
         }
     }
 

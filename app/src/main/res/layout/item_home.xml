@@ -13,7 +13,7 @@
             android:layout_width="match_parent"
             android:padding="@dimen/dp_10"
             android:orientation="vertical"
-            android:layout_height="@dimen/dp_160">
+            android:layout_height="@dimen/dp_250">
 
         <!--<ImageView-->
         <!--android:background="@mipmap/default_splash_bg"-->
@@ -44,7 +44,7 @@
                 android:id="@+id/imgLayout"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="@dimen/dp_160">
 
             <ImageView
                     android:scaleType="centerCrop"
@@ -53,33 +53,18 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"/>
-            <ImageView
-                    android:scaleType="centerCrop"
-                    android:padding="@dimen/dp_5"
-                    android:id="@+id/image2"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="match_parent"/>
-            <ImageView
-                    android:scaleType="centerCrop"
-                    android:padding="@dimen/dp_5"
-                    android:id="@+id/image3"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="match_parent"/>
 
         </LinearLayout>
 
 
-        <!--<TextView-->
-        <!--android:text="简介"-->
-        <!--android:layout_above="@id/title"-->
-        <!--android:layout_toRightOf="@id/image"-->
-        <!--android:textColor="#00ff00"-->
-        <!--android:maxLines="1"-->
-        <!--android:textSize="20dp"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"/>-->
+        <TextView
+                android:id="@+id/time"
+                android:textColor="@android:color/black"
+                android:maxLines="1"
+                android:textSize="@dimen/dp_15"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_20"/>
 
     </LinearLayout>
 </android.support.v7.widget.CardView>

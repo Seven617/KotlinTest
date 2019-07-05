@@ -44,4 +44,6 @@ abstract class BaseActivity : AppCompatActivity(), AnkoLogger {
         startActivity<T>()
         finish()
     }
+
+
 }

@@ -33,12 +33,18 @@ public class URLProviderUtils {
 
     /**
      * 获取首页的url
+     *
      * @return url
      */
-    public static String getHomeUrl(int pageNumber) {
-        String url = "http://api01.6bqb.com/toutiao/article?apikey=0912BFCEC4BB81FD452B99B4B2864B6F&uid=5954781019&pageType=article"+"&page="+pageNumber;
+//    public static String getHomeUrl(int pageNumber) {
+//        String url = "http://api01.6bqb.com/toutiao/search?apikey=0912BFCEC4BB81FD452B99B4B2864B6F&tag=__all__"+"&page="+pageNumber;
+//        return url;
+//    }
+    public static String getHomeUrl(int pageNumber, int count) {
+        String url = "https://api.apiopen.top/getWangYiNews?" + "&page=" + pageNumber + "&count" + count;
         return url;
     }
+
 
     public static String getMVareaUrl() {
         String url = "https://mapi.yinyuetai.com/video/get_mv_areas.json?deviceinfo="
