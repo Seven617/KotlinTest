@@ -33,17 +33,25 @@ public class URLProviderUtils {
 
     /**
      * 获取首页的url
-     *
+     * @param pageNumber 数据偏移量
+     * @param count   返回数据的条目个数
      * @return url
      */
-//    public static String getHomeUrl(int pageNumber) {
-//        String url = "http://api01.6bqb.com/toutiao/search?apikey=0912BFCEC4BB81FD452B99B4B2864B6F&tag=__all__"+"&page="+pageNumber;
-//        return url;
-//    }
-    public static String getHomeUrl(int pageNumber, int count) {
-        String url = "https://api.apiopen.top/getWangYiNews?" + "&page=" + pageNumber + "&count" + count;
+    public static String getNewsUrl(String type,int pageNumber, int count) {
+        String url = "https://3g.163.com/touch/reconstruct/article/list/"+type+"/"+pageNumber+"-"+count+".html";
         return url;
     }
+
+
+
+    public static String getHomeUrl(String type,int pageNumber, int count) {
+        String url = "https://3g.163.com/touch/reconstruct/article/list/"+type+"/"+pageNumber+"-"+count+".html";
+        return url;
+    }
+//    public static String getHomeUrl(int pageNumber, int count) {
+//        String url = "https://api.apiopen.top/getWangYiNews?" + "&page=" + pageNumber + "&count" + count;
+//        return url;
+//    }
 
 
     public static String getMVareaUrl() {

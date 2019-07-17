@@ -12,31 +12,16 @@ interface ToolBarManager {
     val toolbar: Toolbar
 
     fun initMainToolBar() {
-        toolbar.setTitle("Kotlin影音")
+        toolbar.setTitle("KotlinTest")
         toolbar.inflateMenu(R.menu.main)
         toolbar.setOnMenuItemClickListener {
             toolbar.context.startActivity(Intent(toolbar.context,SettingActivity::class.java))
             true
         }
-
-
-//        toolbar.setOnMenuItemClickListener(object : Toolbar.OnMenuItemClickListener {
-//            override fun onMenuItemClick(item: MenuItem?): Boolean {
-//                when(item?.itemId){
-//                    R.id.setting->{
-//                        toolbar.context.startActivity(Intent(toolbar.context,SettingActivity::class.java))
-//                    }
-//                }
-//
-//
-//                return true
-//            }
-//
-//        })
     }
 
 
     fun initSettingToolBar(){
-        toolbar.setTitle("设置")
+        toolbar.title = "设置"
     }
 }

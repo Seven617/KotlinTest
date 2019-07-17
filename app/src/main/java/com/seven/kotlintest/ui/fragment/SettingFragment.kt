@@ -13,6 +13,7 @@ import com.seven.kotlintest.ui.activity.AboutActivity
 import org.jetbrains.anko.toast
 
 
+@Suppress("DEPRECATION")
 class SettingFragment: PreferenceFragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         addPreferencesFromResource(R.xml.setting)

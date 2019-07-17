@@ -7,7 +7,7 @@ import android.view.View
 import android.widget.RelativeLayout
 import com.bumptech.glide.Glide
 import com.seven.kotlintest.R
-import com.seven.kotlintest.model.Data
+import com.seven.kotlintest.model.HomeItemBean
 import kotlinx.android.synthetic.main.item_home.view.*
 
 class HomeItemView : RelativeLayout {
@@ -20,9 +20,10 @@ class HomeItemView : RelativeLayout {
     }
 
     @SuppressLint("SetTextI18n")
-    fun setData(data: Data) {
+    fun setData(data: HomeItemBean) {
         title.text = data.title
-        Glide.with(this).load(data.image).into(image1)
-        time.text = data.passtime
+        Glide.with(this).load(data.imgsrc).into(image1)
+        time.text = data.ptime
+        source.text = data.source
     }
 }

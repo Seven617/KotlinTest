@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':httpclient', ':citypickerview', ':dropdownmenu', ':banner', ':agentweb', ':FJMtSortButtonLib'

@@ -3,15 +3,15 @@ package com.seven.kotlintest.util
 import com.seven.kotlintest.R
 import com.seven.kotlintest.base.BaseFragment
 import com.seven.kotlintest.ui.fragment.HomeFragment
-import com.seven.kotlintest.ui.fragment.MvFragment
+import com.seven.kotlintest.ui.fragment.NewsFragment
 import com.seven.kotlintest.ui.fragment.VBangFragment
 import com.seven.kotlintest.ui.fragment.YueDanFragment
 
 class FragmentUtil private constructor(){
-    val homeFragment by lazy { HomeFragment() }
-    val mvFragment by lazy { MvFragment() }
-    val vBangFragment by lazy { VBangFragment() }
-    val yueDanFragment by lazy { YueDanFragment() }
+    private val newsFragment by lazy { NewsFragment() }
+    private val homeFragment by lazy { HomeFragment() }
+    private val vBangFragment by lazy { VBangFragment() }
+    private val yueDanFragment by lazy { YueDanFragment() }
 
 
     companion object{
@@ -20,8 +20,8 @@ class FragmentUtil private constructor(){
 
     fun getFragment(tabId:Int):BaseFragment?{
         when(tabId){
-            R.id.tab_home->return  homeFragment
-            R.id.tab_mv->return  mvFragment
+            R.id.tab_home->return  newsFragment
+            R.id.tab_video->return  homeFragment
             R.id.tab_vbang->return  vBangFragment
             R.id.tab_yuedan->return  yueDanFragment
         }
