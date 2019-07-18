@@ -8,13 +8,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/FJMtSortButtonLib" />
-            <option value="$PROJECT_DIR$/agentweb" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/banner" />
-            <option value="$PROJECT_DIR$/citypickerview" />
-            <option value="$PROJECT_DIR$/dropdownmenu" />
-            <option value="$PROJECT_DIR$/httpclient" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
