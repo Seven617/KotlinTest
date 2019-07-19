@@ -2,7 +2,7 @@ package com.seven.kotlintest.ui.fragment
 
 import com.seven.kotlintest.adapter.HomeAdapter
 import com.seven.kotlintest.base.BaseListAdapter
-import com.seven.kotlintest.base.BaseListFragmnet
+import com.seven.kotlintest.base.BaseListFragment
 import com.seven.kotlintest.base.BaseListPresenter
 import com.seven.kotlintest.model.HomeItemBean
 import com.seven.kotlintest.presenter.impl.HomePresenterImpl
@@ -11,7 +11,7 @@ import com.seven.kotlintest.view.HomeView
 import com.seven.kotlintest.widget.HomeItemView
 import org.jetbrains.anko.support.v4.startActivity
 
-class HomeFragment : BaseListFragmnet<List<HomeItemBean>, HomeItemBean, HomeItemView>(), HomeView {
+class HomeFragment : BaseListFragment<List<HomeItemBean>, HomeItemBean, HomeItemView>(), HomeView {
 
     var lists = ArrayList<HomeItemBean>()
     override fun getSpecialAdapter(): BaseListAdapter<HomeItemBean, HomeItemView> {
@@ -23,7 +23,7 @@ class HomeFragment : BaseListFragmnet<List<HomeItemBean>, HomeItemBean, HomeItem
         return HomePresenterImpl(this)
     }
 
-    override fun getList(response: List<HomeItemBean>?): List<HomeItemBean>? {
+    override fun getList(type: Int,response: List<HomeItemBean>?): List<HomeItemBean>? {
         lists.addAll(response!!)
         return response
     }

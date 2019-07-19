@@ -7,7 +7,7 @@ import android.view.View
 import com.seven.kotlintest.R
 import kotlinx.android.synthetic.main.fragment_home.*
 
-abstract class BaseListFragmnet<RESPONSE, ITEMBEAN, ITEMVIEW : View> : BaseFragment(), BaseView<RESPONSE> {
+abstract class BaseListFragment<RESPONSE, ITEMBEAN, ITEMVIEW : View> : BaseFragment(), BaseView<RESPONSE> {
 
     val adapter by lazy { getSpecialAdapter() }
     val presenter by lazy { getSpecialPresenter() }
@@ -18,11 +18,11 @@ abstract class BaseListFragmnet<RESPONSE, ITEMBEAN, ITEMVIEW : View> : BaseFragm
 
     override fun loadSuccess(result: RESPONSE?) {
         refreshLayout.isRefreshing = false
-        adapter.updateList(getList(result))
+        adapter.updateList(getList(BaseListPresenter.TYPE_INIT_REFRESH,result))
     }
 
     override fun loadMore(result: RESPONSE?) {
-        adapter.loadMore(getList(result))
+        adapter.loadMore(getList(BaseListPresenter.TYPE_LOAD_MORE,result))
     }
 
     override fun initView(): View? {
@@ -62,7 +62,7 @@ abstract class BaseListFragmnet<RESPONSE, ITEMBEAN, ITEMVIEW : View> : BaseFragm
 
     abstract fun getSpecialPresenter(): BaseListPresenter
 
-    abstract fun getList(response: RESPONSE?): List<ITEMBEAN>?
+    abstract fun getList(type: Int,response: RESPONSE?): List<ITEMBEAN>?
 }
 
 

@@ -10,7 +10,7 @@
             app:tabTextColor="@color/bb_darkBackgroundColor"
             android:background="@color/white"
             app:tabSelectedTextColor="@color/colorPrimary"
-            app:tabIndicatorColor="@color/white"
+            app:tabIndicatorColor="@color/colorPrimary"
             app:tabIndicatorHeight="@dimen/dp_2"
             android:minWidth="@dimen/dp_25"
             android:layout_width="match_parent"

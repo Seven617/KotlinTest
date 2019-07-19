@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
+import android.view.ViewGroup
 import com.seven.kotlintest.ui.fragment.NewsPagerFragment
 
 class NewsPagerAdapter(val list:List<String>?, fm: FragmentManager?) : FragmentPagerAdapter(fm) {
@@ -26,5 +27,15 @@ class NewsPagerAdapter(val list:List<String>?, fm: FragmentManager?) : FragmentP
 
     override fun getPageTitle(position: Int): CharSequence? {
         return newsTitle[position]
+    }
+
+    //解决切换NewsPagerFragment 不保留position
+    override fun getItemPosition(`object`: Any): Int {
+        return POSITION_NONE
+    }
+
+    //解决点击不相邻的Fragment时候, 数据重复加载.
+    override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
+
     }
 }
